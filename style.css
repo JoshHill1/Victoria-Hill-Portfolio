@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #F5F5F5;
+  --primary: #eae7e2;
+  --secondary: #a74e4a;
+  --accent: #818c7e;
+  --header-height: 100px;
+
+  /* header height scales between 80px and 120px */
+  /* --header-height: clamp(80px, 10vh, 120px); */
+  /* --base-font-size: 16px; */
+}
+
+/* html {
+  font-size: var(--base-font-size);
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+} */
+
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: var(--white);
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 28.8px 96px;
+}
+header h1 a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 100;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin: 0 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  transition: opacity 0.2s ease;
+}
+.resume-btn {
+  padding: 12px 16px;
+  background-color: var(--secondary);
+  border-radius: 500px;
+  color: #FFF;
+  font-size: 1rem;
+}
+
+/* Home Content */
+
+main {
+  background-color: var(--primary);
+  z-index: 1;
+
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  align-items: center;
+  padding: 140px 120px 0;
+  height: 100vh;
+}
+
+.home-content h1, .home-content p, .home-content a{
+  margin: 20px 0;
+}
+.home-content h1 {
+  font-size: 7.2rem;
+  font-weight: 100;
+}
+.home-content p {
+  font-size: 2.3rem;
+  padding-bottom: 100px;
+}
+.home-content a {
+  padding: 32px 162px;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+.resume-btn:hover {
+  opacity: 0.9;
+}
+
+#vheadshot {
+  width: 710px;
+  object-fit: cover;
+  object-position: 50% 10%;
+  height: 710px;
+  border-radius: 45px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Short Story */
+
+#short-story {
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 130px 150px;
+  color: #FFF;
+}
+
+.short-s-cards {
+  text-align: center;
+}
+.short-s-cards img {
+  height: 200px;
+  padding: 0 0 30px 0;
+}
+.short-s-cards h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.short-s-cards p {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.015rem;
+  padding: 20px 5px 0;
+}
+
+/* Work Experience */
+
+#work-experience {
+  padding: 96px 120px 180px;
+}
+#work-experience h2 {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 100;
+  padding: 70px 70px 50px;
+}
+
+#work-experience-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.we-card {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.015rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  border-radius: 45px;
+  padding: 60px 50px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.we-card img {
+  height: 40%;
+  width: auto;
+}
+.we-card a {
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--white);
+  border-radius: 500px;
+  padding: 10px;
+  transition: 0.2s ease;
+}
+.we-card a:hover {
+  color: var(--secondary);
+  background-color: var(--white);
+}
+
+/* Technical Skills */
+
+#tech-skills {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 100px 0;
+}
+#tech-skills h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.015rem;
+  margin-bottom: 80px;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.marquee span {
+  font-size: 5rem;
+  margin-right: 2rem;
+}
+
+.marquee_inner {
+  display: inline-block;
+  /* Duplicate content so the scroll is seamless */
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Certificates */
+
+#certificates {
+  padding: 100px 100px 0;
+}
+#certificates h2 {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 100;
+}
+
+.cert-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.single-certi {
+  text-align: center;
+  margin: 20px 0 0;
+}
+.single-certi p {
+  margin: 10px 0;
+  font-family: 'Arial Narrow','Franklin Gothic Medium', Arial, sans-serif;
+  font-size: 1.4rem;
+}
+.single-certi img {
+  height: 70%;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px 120px;
+}
+footer h3 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+footer a {
+  color: #000;
+  font-size: 5rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+  .home {
+    padding: 100px 60px 0;
+    gap: 60px;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-content p {
+    font-size: 1.8rem;
+    padding-bottom: 50px;
+  }
+  .home-content a {
+    padding: 20px 100px;
+  }
+  #vheadshot {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+  #short-story {
+    /* flex-direction: column; */
+    padding: 80px 40px;
+    text-align: center;
+  }
+  #short-story > * {
+    margin-bottom: 20px;
+  }
+  #work-experience {
+    padding: 80px 40px 120px;
+  }
+  #work-experience h2 {
+    font-size: 5rem;
+    padding: 40px 20px 30px;
+  }
+  #work-experience-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #tech-skills {
+    padding: 80px 0;
+  }
+  #tech-skills h2 {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  .marquee span {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  #certificates {
+    padding: 80px 40px 0;
+  }
+  #certificates h2 {
+    font-size: 5rem;
+  }
+  .cert-info {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  footer {
+    padding: 40px 20px 40px;
+    text-align: center;
+  }
+  footer h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  footer a {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    /* flex-direction: column;
+    align-items: flex-start; */
+    height: auto;
+  }
+  header nav ul {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  header nav ul li {
+    margin: 0px 10px;
+  }
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 0;
+    gap: 30px;
+    height: auto;
+  }
+  .home-content h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .home-content p {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .home-content a {
+    padding: 15px 40px;
+  }
+  #vheadshot {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+  #short-story {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  #work-experience {
+    padding: 60px 20px 80px;
+  }
+  #work-experience h2 {
+    font-size: 4rem;
+    padding: 20px;
+  }
+  #work-experience-cards {
+    grid-template-columns: 1fr;
+  }
+  #tech-skills {
+    padding: 60px 0;
+  }
+  .marquee span {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+  }
+  #certificates {
+    padding: 60px 20px 0;
+  }
+  #certificates h2 {
+    font-size: 4rem;
+  }
+  .single-certi p {
+    font-size: 1.2rem;
+  }
+  .single-certi a img {
+    width: 90vw;
+  }
+  footer {
+    padding: 20px 10px 20px;
+  }
+  footer h3 {
+    font-size: 2.5rem;
+  }
+  footer a {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 10px;
+  }
+  header nav ul li {
+    margin: 5px 0;
+  }
+  .home {
+    padding: 60px 10px 0;
+  }
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+  .home-content p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+  .home-content a {
+    padding: 10px 20px;
+  }
+  #vheadshot {
+    max-width: 100%;
+  }
+  #short-story {
+    padding: 40px 10px;
+  }
+  #work-experience {
+    padding: 40px 10px 60px;
+  }
+  #work-experience h2 {
+    font-size: 3rem;
+    padding: 10px;
+  }
+  #tech-skills h2 {
+    font-size: 1rem;
+  }
+  .marquee span {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+  #certificates {
+    padding: 40px 10px 0;
+  }
+  #certificates h2 {
+    font-size: 3rem;
+  }
+  .cert-info {
+    grid-template-columns: 1fr;
+  }
+  .single-certi a img {
+    width: 90vw;
+  }
+  footer {
+    padding: 10px 5px 10px;
+  }
+  footer h3 {
+    font-size: 2rem;
+  }
+  footer a {
+    font-size: 2rem;
+  }
+}
