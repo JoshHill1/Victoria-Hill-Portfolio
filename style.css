@@ -442,12 +442,29 @@ footer a {
 @media (max-width: 480px) {
   header {
     padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  header nav {
+    width: 90vw;
+  }
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   header nav ul li {
-    margin: 5px 0;
+    margin: 0 1px;
+  }
+  header nav ul li .resume-btn{
+    padding: 0;
+    color: var(--secondary);
+    background-color: rgba(0, 0, 0, 0);
   }
   .home {
-    padding: 60px 10px 0;
+    padding: 90px 10px 10px;
   }
   .home-content h1 {
     font-size: 2.5rem;
@@ -464,6 +481,11 @@ footer a {
   }
   #short-story {
     padding: 40px 10px;
+    gap: 20px;
+  }
+  #short-story img {
+    height: 150px;
+    padding: 0 0 10px;
   }
   #work-experience {
     padding: 40px 10px 60px;
