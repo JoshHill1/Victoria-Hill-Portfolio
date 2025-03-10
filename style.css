@@ -72,7 +72,7 @@ header nav ul li a {
 main {
   background-color: var(--primary);
   z-index: 1;
-
+  padding-top: 140px;
 }
 
 .home {
@@ -80,8 +80,8 @@ main {
   justify-content: space-between;
   gap: 120px;
   align-items: center;
-  padding: 140px 120px 0;
-  height: 100vh;
+  padding: 0 120px;
+  height: calc(100vh - 140px);
 }
 
 .home-content h1, .home-content p, .home-content a{
@@ -268,7 +268,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px 120px;
+  padding: 60px 120px 120px;
 }
 footer h3 {
   font-size: 4rem;
@@ -279,7 +279,9 @@ footer a {
   font-size: 5rem;
 }
 
+
 /* Responsive Styles */
+
 
 @media (max-width: 1024px) {
   header {
@@ -374,9 +376,14 @@ footer a {
   .home {
     flex-direction: column;
     align-items: center;
-    padding: 80px 20px 0;
-    gap: 30px;
+    padding: 100px 20px 10px;
+    gap: 0px;
     height: auto;
+  }
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .home-content h1 {
     font-size: 3.5rem;
@@ -384,11 +391,12 @@ footer a {
   }
   .home-content p {
     font-size: 1.5rem;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     text-align: center;
   }
   .home-content a {
     padding: 15px 40px;
+    text-align: center;
   }
   #vheadshot {
     width: 100%;
