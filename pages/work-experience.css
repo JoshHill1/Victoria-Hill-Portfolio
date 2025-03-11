@@ -1,0 +1,73 @@
+.red-bg {
+  background-color: var(--secondary);
+}
+.cream-bg {
+  background-color: var(--primary);
+}
+
+.header-w-e-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  align-items: center;
+}
+
+.header-w-e-card .w-e-card-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+  aspect-ratio: 1 / 1;
+  scale: 110%;
+
+}
+
+.w-e-card-txt-snippet {
+  height: 100vh;
+  width: 50vw;
+  z-index: 1;
+  padding: 130px 100px;
+}
+.w-e-card-txt-snippet img {
+  width: 70%;
+  height: auto;
+  padding: var(--header-height) 0 0;
+}
+.red-bg p {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary);
+  padding: 25px 0 64px;
+}
+.cream-bg p {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--secondary);
+  padding: 25px 0 64px;
+}
+.red-bg a {
+  color: var(--secondary);
+  background-color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--white);
+  border-radius: 500px;
+  padding: 32px 162px;
+}
+.red-bg a:hover {
+  color: var(--white);
+  background-color: var(--secondary);
+  transition: 0.2s ease;
+}
+.cream-bg a {
+  color: var(--white);
+  background-color: var(--secondary);
+  text-decoration: none;
+  border: 1px solid var(--secondary);
+  border-radius: 500px;
+  padding: 32px 162px;
+}
+.cream-bg a:hover {
+  color: var(--secondary);
+  background-color: var(--white);
+  transition: 0.2s ease;
+}

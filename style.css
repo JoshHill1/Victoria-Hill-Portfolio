@@ -40,6 +40,7 @@ header {
   align-items: center;
   height: var(--header-height);
   padding: 28.8px 96px;
+  z-index: 999;
 }
 header h1 a {
   color: var(--secondary);
@@ -72,7 +73,7 @@ header nav ul li a {
 main {
   background-color: var(--primary);
   z-index: 1;
-  padding-top: 140px;
+  padding-top: var(--header-height);
 }
 
 .home {
@@ -81,7 +82,7 @@ main {
   gap: 120px;
   align-items: center;
   padding: 0 120px;
-  height: calc(100vh - 140px);
+  height: calc(100vh - var(--header-height));
 }
 
 .home-content h1, .home-content p, .home-content a{
@@ -269,6 +270,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 60px 120px 120px;
+  z-index: 999;
 }
 footer h3 {
   font-size: 4rem;
