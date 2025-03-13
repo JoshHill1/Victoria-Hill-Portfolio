@@ -113,6 +113,9 @@ main {
   border-radius: 45px;
   aspect-ratio: 1 / 1;
 }
+#vheadshot-phone {
+  display: none;
+}
 
 /* Short Story */
 
@@ -454,9 +457,12 @@ footer a {
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
+    height: var(--header-height);
+    width: 100%;
+
   }
   header nav {
-    width: 90vw;
+    width: 100%;
   }
   header nav ul {
     display: flex;
@@ -474,20 +480,32 @@ footer a {
     background-color: rgba(0, 0, 0, 0);
   }
   .home {
-    padding: 90px 10px 10px;
+    padding: 20px 30px 10px;
   }
   .home-content h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 10px;
   }
   .home-content p {
-    font-size: 1.2rem;
-    padding-bottom: 20px;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0;
   }
   .home-content a {
-    padding: 10px 20px;
+    padding: 20px;
+    margin: 0 0 20px;
   }
   #vheadshot {
-    max-width: 100%;
+    display: none;
+  }
+  #vheadshot-phone {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 10%;
+    border-radius: 45px;
+    aspect-ratio: 1 / 1;
   }
   #short-story {
     padding: 40px 10px;
@@ -498,11 +516,20 @@ footer a {
     padding: 0 0 10px;
   }
   #work-experience {
-    padding: 40px 10px 60px;
+    padding: 40px 20px 100px;
+    height: fit-content;
   }
   #work-experience h2 {
     font-size: 3rem;
-    padding: 10px;
+    padding: 10px 60px 15px;
+  }
+  #work-experience-cards {
+    gap: 30px;
+  }
+  .we-card {
+    max-width: 100%;
+    padding: 30px 20px 40px;
+    
   }
   #tech-skills h2 {
     font-size: 1rem;
@@ -522,6 +549,7 @@ footer a {
   }
   .single-certi a img {
     width: 90vw;
+    height: auto;
   }
   footer {
     padding: 10px 5px 10px;

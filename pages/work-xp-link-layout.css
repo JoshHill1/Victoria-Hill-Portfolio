@@ -1,3 +1,16 @@
+:root {
+  --white: #F5F5F5;
+  --primary: #eae7e2;
+  --secondary: #a74e4a;
+  --accent: #818c7e;
+  --header-height: 100px;
+}
+main {
+  background-color: var(--primary);
+  z-index: 1;
+  padding-top: var(--header-height);
+}
+
 .experience-info {
   display: flex;
   justify-content: space-between;
@@ -74,4 +87,44 @@
 .work-display-card .work-exp-see-more:hover {
   color: var(--secondary);
   background-color: var(--primary);
+}
+
+@media (max-width: 480px) {
+  .experience-info {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 30px;
+  }
+  .experience-info img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .experience-info p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 0 10px;
+  }
+  .more-xp-info {
+    justify-content: space-between;
+  }
+  .more-xp-info p {
+    width: fit-content;
+  }
+  .work-display {
+    grid-template-columns: 1fr;
+    padding: 40px 10px 60px;
+  }
+  .work-display-card h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+  }
+  .work-display-card p {
+    font-size: 1.2rem;
+    padding: 20px 20px;
+  }
+  .work-display-card .work-exp-see-more {
+    padding: 20px 30px;
+    font-size: 1rem;
+  }
 }
