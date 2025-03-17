@@ -90,15 +90,23 @@ main {
     height: fit-content;
   }
   .header-w-e-card {
+    order: 1;
     grid-template-columns: 1fr;
   }
   .header-w-e-card .w-e-card-img {
+    order: 2;
     width: 100vw;
     height: 100vw;
   }
   .header-w-e-card .w-e-card-txt-snippet {
     width: 100vw;
     padding: 10px 30px 50px;
+  }
+  .w-e-card-txt-snippet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
   }
   .w-e-card-txt-snippet img {
     width: 80%;
@@ -108,6 +116,9 @@ main {
     line-height: 1.5rem;
     font-weight: 100;
     font-size: 1.35rem;
+    padding: 25px 0;
   }
-
+  .w-e-card-txt-snippet a {
+    padding: 15px 100px;
+  }
 }

@@ -470,6 +470,7 @@ footer a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin: 3px;
   }
   header nav ul li {
     margin: 0 1px;
@@ -523,13 +524,13 @@ footer a {
     font-size: 3rem;
     padding: 10px 60px 15px;
   }
-  #work-experience-cards {
+  /* #work-experience-cards {
     gap: 30px;
-  }
+  } */
   .we-card {
     max-width: 100%;
     padding: 30px 20px 40px;
-    
+    margin-bottom: 30px;
   }
   #tech-skills h2 {
     font-size: 1rem;
@@ -552,10 +553,11 @@ footer a {
     height: auto;
   }
   footer {
-    padding: 10px 5px 10px;
+    padding: 80px 15px;
   }
   footer h3 {
     font-size: 2rem;
+    margin-bottom: 0;
   }
   footer a {
     font-size: 2rem;
